@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MyMovie | Movie Plans</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <div>
+                <h1>My Movie Plans</h1>
+                <p>Create and manage your upcoming movie nights.</p>
+            </div>
+
+            <button id="backBtn" class="header-button">
+                Back to Explorer
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Create and Update Movie Plan -->
+        <section>
+            <div class="section-heading">
+                <h2 id="formHeading">Create a Movie Plan</h2>
+                <p>Choose a movie and schedule your next movie night.</p>
+            </div>
+
+            <form id="planForm">
+
+                <label for="planTitle">Movie title</label>
+
+                <input
+                    id="planTitle"
+                    type="text"
+                    placeholder="Enter movie title"
+                    required
+                >
+
+                <label for="planYear">Release year</label>
+
+                <input
+                    id="planYear"
+                    type="text"
+                    placeholder="e.g. 2024"
+                >
+
+                <label for="planDate">Watch date</label>
+
+                <input
+                    id="planDate"
+                    type="date"
+                    required
+                >
+
+                <label for="planNotes">Notes</label>
+
+                <textarea
+                    id="planNotes"
+                    placeholder="Add movie night details..."
+                ></textarea>
+
+                <button id="savePlanBtn" type="submit">
+                    Save Movie Plan
+                </button>
+
+                <button
+                    id="cancelEditBtn"
+                    type="button"
+                    hidden
+                    class="secondary-button"
+                >
+                    Cancel Edit
+                </button>
+
+            </form>
+
+            <p id="planMessage" class="status-message" role="status"></p>
+        </section>
+
+
+        <!-- Saved Movie Plans -->
+        <section>
+            <div class="section-heading">
+                <h2>Saved Movie Plans</h2>
+                <p>View, update, or delete your planned movie nights.</p>
+            </div>
+
+            <p id="plansCount"></p>
+
+            <div id="plansList" class="movie-grid"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>MyMovie &copy; 2026 | Your personal movie planner</p>
+    </footer>
+
+    <script src="itinerary.js"></script>
+
+</body>
+</html>

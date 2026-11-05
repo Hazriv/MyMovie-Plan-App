@@ -1,0 +1,531 @@
+
+/* =========================================
+   MYMOVIE - CREAM & FOREST GREEN THEME
+   Complete stylesheet for both pages
+========================================= */
+
+/* ---------- GLOBAL ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #F5F0E6;
+    color: #263D30;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+    color: #254C36;
+    line-height: 1.3;
+}
+
+p {
+    color: #526052;
+}
+
+a {
+    color: #315B40;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #193A28;
+}
+
+/* ---------- HEADER ---------- */
+
+header {
+    background-color: #E8E0CF;
+    border-bottom: 1px solid #D8CFBE;
+    padding: 25px 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 750;
+    color: #254C36;
+    letter-spacing: -1px;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #647565;
+    font-size: 1.05rem;
+}
+
+header button,
+header a {
+    flex-shrink: 0;
+}
+
+/* ---------- MAIN CONTENT ---------- */
+
+main {
+    width: 94%;
+    max-width: 1450px;
+    margin: 38px auto;
+}
+
+section {
+    background-color: #FFFDF8;
+    border: 1px solid #E4DCCB;
+    border-radius: 18px;
+    padding: 32px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 18px rgba(64, 54, 35, 0.05);
+}
+
+section h2 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+section > p {
+    color: #647565;
+    margin-bottom: 24px;
+    font-size: 1rem;
+}
+
+/* ---------- FORMS ---------- */
+
+form {
+    width: 100%;
+}
+
+label {
+    display: block;
+    color: #315B40;
+    font-weight: 650;
+    margin-bottom: 8px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 13px 15px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #263D30;
+    background-color: #FAF7EF;
+    border: 1px solid #D8CFBE;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #9A9B8C;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #6B8872;
+    box-shadow: 0 0 0 3px rgba(107, 136, 114, 0.15);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+form > div {
+    margin-bottom: 18px;
+}
+
+/* ---------- SEARCH FORM ---------- */
+
+/* Place the label above the search input. */
+
+#searchForm {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+}
+
+#searchForm label {
+    display: block;
+    margin-bottom: 0;
+}
+
+/* Keep the input and button on the same row. */
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.search-container input {
+    flex: 1;
+    min-width: 0;
+    width: auto;
+}
+
+.search-container button {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+/* ---------- RECOMMENDATION FORM ---------- */
+
+#moodSelect {
+    margin-bottom: 18px;
+}
+
+/* ---------- MOVIE PLAN FORM ---------- */
+
+#planForm {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#planForm button {
+    align-self: flex-start;
+}
+
+/* ---------- BUTTONS ---------- */
+
+button {
+    font-family: inherit;
+    font-size: 0.98rem;
+    font-weight: 650;
+    color: #FFFFFF;
+    background-color: #315B40;
+    border: none;
+    border-radius: 10px;
+    padding: 13px 21px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s,
+                box-shadow 0.2s;
+}
+
+button:hover {
+    background-color: #193A28;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(37, 76, 54, 0.15);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:disabled {
+    background-color: #AAB7AA;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Navigation buttons */
+
+#openPlansBtn,
+#backBtn {
+    background-color: #315B40;
+    color: #FFFFFF;
+}
+
+#openPlansBtn:hover,
+#backBtn:hover {
+    background-color: #193A28;
+}
+
+/* Edit buttons */
+
+.edit-btn {
+    background-color: #6B8872;
+    color: #FFFFFF;
+}
+
+.edit-btn:hover {
+    background-color: #526F59;
+}
+
+/* Delete buttons */
+
+.delete-btn {
+    background-color: #A65345;
+    color: #FFFFFF;
+}
+
+.delete-btn:hover {
+    background-color: #853D33;
+}
+
+/* Cancel button */
+
+#cancelEditBtn {
+    background-color: #E8E0CF;
+    color: #315B40;
+}
+
+#cancelEditBtn:hover {
+    background-color: #D8CFBE;
+}
+
+/* ---------- MOVIE RESULTS ---------- */
+
+#movieResults,
+#recommendations,
+#watchlist,
+#plansList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+    margin-top: 22px;
+}
+
+/* Movie cards */
+
+.movie-card {
+    background-color: #F8F4EA;
+    border: 1px solid #E2D9C7;
+    border-radius: 15px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.movie-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 18px rgba(64, 54, 35, 0.10);
+}
+
+.movie-card img {
+    width: 100%;
+    max-height: 330px;
+    object-fit: contain;
+    border-radius: 10px;
+    background-color: #E8E0CF;
+}
+
+.movie-card h3 {
+    font-size: 1.2rem;
+    color: #254C36;
+}
+
+.movie-card p {
+    font-size: 0.93rem;
+    color: #526052;
+}
+
+.movie-card button {
+    width: 100%;
+    margin-top: auto;
+}
+
+/* ---------- WATCHLIST ---------- */
+
+#watchlist .movie-card {
+    background-color: #F0EBDD;
+}
+
+/* ---------- RECOMMENDATIONS ---------- */
+
+#recommendations .movie-card {
+    border-left: 4px solid #6B8872;
+}
+
+/* ---------- MOVIE PLANS ---------- */
+
+.plan-card {
+    background-color: #F8F4EA;
+    border: 1px solid #E2D9C7;
+    border-left: 5px solid #6B8872;
+    border-radius: 13px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.plan-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(64, 54, 35, 0.08);
+}
+
+.plan-card h3 {
+    font-size: 1.2rem;
+    color: #254C36;
+}
+
+.plan-card p {
+    font-size: 0.95rem;
+    color: #526052;
+    overflow-wrap: anywhere;
+}
+
+.plan-card button {
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+/* ---------- SUMMARY ---------- */
+
+.summary {
+    background-color: #EAE5D5;
+    border: 1px solid #D8CFBE;
+    border-left: 5px solid #315B40;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 22px;
+}
+
+.summary h3 {
+    color: #254C36;
+    margin-bottom: 8px;
+}
+
+.summary p {
+    color: #526052;
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+/* ---------- STATUS MESSAGES ---------- */
+
+#planMessage,
+.message-success {
+    color: #315B40;
+    background-color: #E7F0E5;
+    border: 1px solid #C9DCC9;
+    border-radius: 9px;
+    padding: 11px 15px;
+    margin: 12px 0;
+}
+
+.message-error {
+    color: #963F35;
+    background-color: #F8E9E5;
+    border: 1px solid #E8C9C1;
+    border-radius: 9px;
+    padding: 11px 15px;
+    margin: 12px 0;
+}
+
+.empty-message {
+    color: #7A8276;
+    background-color: #F8F4EA;
+    border: 1px dashed #D8CFBE;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    background-color: #E8E0CF;
+    border-top: 1px solid #D8CFBE;
+    text-align: center;
+    padding: 22px;
+    margin-top: 45px;
+}
+
+footer p {
+    color: #647565;
+    font-size: 0.9rem;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 22px 5%;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        font-size: 1.9rem;
+    }
+
+    main {
+        width: 92%;
+        margin: 25px auto;
+    }
+
+    section {
+        padding: 23px;
+        margin-bottom: 22px;
+    }
+
+    section h2 {
+        font-size: 1.45rem;
+    }
+
+    /* Stack search input and button on smaller screens. */
+
+    .search-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-container input,
+    .search-container button {
+        width: 100%;
+    }
+
+    #movieResults,
+    #recommendations,
+    #watchlist,
+    #plansList {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+
+    header {
+        flex-direction: column;
+    }
+
+    header button,
+    header a {
+        width: 100%;
+        text-align: center;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    section {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    #movieResults,
+    #recommendations,
+    #watchlist,
+    #plansList {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        padding: 12px 16px;
+    }
+}

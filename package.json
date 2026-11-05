@@ -1,0 +1,14 @@
+{
+    "name": "mymovie-plan-app",
+    "version": "1.0.0",
+    "description": "MyMovie - Movie Explorer and Movie Planner",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron ."
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "electron": "^44.9.3"
+    }
+}

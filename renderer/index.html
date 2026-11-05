@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MyMovie | Movie Explorer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <div>
+                <h1>MyMovie</h1>
+                <p>Discover movies. Build your watchlist. Plan your movie night.</p>
+            </div>
+
+            <button id="openPlansBtn" class="header-button">
+                My Movie Plans
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Movie Search -->
+        <section>
+            <div class="section-heading">
+                <h2>Explore Movies</h2>
+                <p>Search for your favourite movies using the OMDb database.</p>
+            </div>
+
+            <form id="searchForm">
+                <label for="movieInput">Movie title</label>
+
+                <div class="search-container">
+                    <input
+                        id="movieInput"
+                        type="text"
+                        placeholder="e.g. Interstellar"
+                        required
+                    >
+
+                    <button type="submit">Search Movies</button>
+                </div>
+            </form>
+
+            <p id="message" class="status-message" role="status"></p>
+
+            <div id="movieResults" class="movie-grid"></div>
+        </section>
+
+
+        <!-- Movie Mood Selector -->
+        <section>
+            <div class="section-heading">
+                <h2>Movie Mood Selector</h2>
+                <p>Choose your current mood and discover movies that match it.</p>
+            </div>
+
+            <label for="moodSelect">How are you feeling today?</label>
+
+            <select id="moodSelect">
+                <option value="">Select your mood</option>
+                <option value="happy">😊 Happy</option>
+                <option value="excited">⚡ Excited</option>
+                <option value="emotional">💗 Emotional</option>
+                <option value="scared">👻 Scared</option>
+                <option value="curious">🔍 Curious</option>
+            </select>
+
+            <button id="recommendBtn" type="button">
+                Find Movies for My Mood
+            </button>
+
+            <p id="recommendMessage" class="status-message" role="status"></p>
+
+            <div id="recommendations" class="movie-grid"></div>
+        </section>
+
+
+        <!-- Watchlist -->
+        <section>
+            <div class="section-heading">
+                <h2>My Watchlist</h2>
+                <p>Keep track of movies you want to watch.</p>
+            </div>
+
+            <p id="watchlistCount"></p>
+
+            <div class="summary">
+                <div>
+                    <h3>Total Watch Time</h3>
+                    <p id="totalRuntime">0 minutes</p>
+                </div>
+
+                <div>
+                    <h3>Average Runtime</h3>
+                    <p id="averageRuntime">0 minutes per movie</p>
+                </div>
+            </div>
+
+            <p id="watchlistMessage" class="status-message" role="status"></p>
+
+            <div id="watchlist" class="movie-grid"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>MyMovie &copy; 2026 | Your personal movie planner</p>
+    </footer>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
